@@ -1,0 +1,35 @@
+﻿@model Website_BanDienThoai_Version1.Models.Comments
+@{
+    Layout = null;
+}
+
+<div class="card mb-3 wow fadeIn">
+
+    <div class="card-body">
+
+        <!-- Default form reply -->
+        <form asp-action="Create" asp-controller="Comments" asp-area="Customer" method="post">
+
+            <!-- Comment -->
+            <div class="form-group">
+                <label for="replyFormComment">Your comment</label>
+                <textarea class="form-control" id="replyFormComment" rows="5" asp-for="Content"></textarea>
+            </div>
+
+            <!-- Name -->
+            <label for="replyFormName">Your name</label>
+            <input type="text" id="replyFormName" asp-for="Name" class="form-control">
+
+            <br>
+
+            <!-- Email -->
+            <label for="replyFormEmail">Your e-mail</label>
+            <input type="email" id="replyFormEmail" asp-for="Email" class="form-control">
+
+
+            <div class="text-center mt-4">
+                <button class="btn btn-info btn-md" type="submit">Post</button>
+            </div>
+        </form>
+     </div>
+ </div>

@@ -1,0 +1,84 @@
+﻿@model Website_BanDienThoai_Version1.Models.Users
+@{
+    ViewData["Title"] = "Details";
+}
+
+
+<br />
+<div class="col-6 " style="padding-left:40px;font-size:30px;text-align:center;">
+
+    <p class="text-info">  Users Details</p>
+</div>
+<div style="padding-left:50px;font-size:14px;">
+    <div class="p-4 border rounded row text-bold">
+        <div class="col-8">
+            <div class="form-group row">
+                <div class="col-4">
+                    <label asp-for="UserName"></label>
+                </div>
+                <div class="col-8">
+                    <input asp-for="UserName" readonly class="form-control" />
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <div class="col-4">
+                    <label asp-for="Password"></label>
+                </div>
+                <div class="col-8">
+                    <input type="password" asp-for="Password" readonly class="form-control" />
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-8">
+                    <label asp-for="Name"></label>
+                </div>
+                <div class="col-4">
+                    <input asp-for="Name" readonly class="form-control" />
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-4">
+                    <label asp-for="Email"></label>
+                </div>
+                <div class="col-8">
+                    <input type="email" asp-for="Email" readonly class="form-control" />
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-4">
+                    <label asp-for="Phone"></label>
+                </div>
+                <div class="col-4">
+                    <input type="number" asp-for="Phone" readonly class="form-control" />
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-4">
+                    <label asp-for="DateOfBith"></label>
+                </div>
+                <div class="col-4">
+                    <input type="datetime" asp-for="DateOfBith" readonly class="form-control" />
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-4">
+                    <label asp-for="Gender"></label>
+                </div>
+                <div class="col-8">
+                    <input type="text" asp-for="Gender" readonly class="form-control" />
+                </div>
+            </div>
+            
+
+        </div>
+      
+        <br />
+        <div class="form-group">
+            <a asp-action="Edit" class="btn btn-success" asp-route-id="@Model.Id" value="Edit">Edit</a>
+            <a asp-action="Index" class="btn btn-success">Back to List</a>
+        </div>
+    </div>
+</div>
+
+

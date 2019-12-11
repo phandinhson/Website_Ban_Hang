@@ -1,0 +1,154 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+    <AspNetCoreHostingModel>InProcess</AspNetCoreHostingModel>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Controllers\**" />
+    <Content Remove="Controllers\**" />
+    <EmbeddedResource Remove="Controllers\**" />
+    <None Remove="Controllers\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="Migrations\20191208145912_addCommentNew.cs" />
+    <Compile Remove="Migrations\20191208145912_addCommentNew.Designer.cs" />
+    <Compile Remove="Migrations\20191209031730_addComments.cs" />
+    <Compile Remove="Migrations\20191209031730_addComments.Designer.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="wwwroot\bower_components\bootstrap\dist\css\bootstrap.css" />
+    <Content Include="wwwroot\bower_components\bootstrap\dist\css\bootstrap.css.map" />
+    <Content Include="wwwroot\bower_components\bootstrap\dist\css\bootstrap.min.css" />
+    <Content Include="wwwroot\bower_components\bootstrap\dist\css\bootstrap.min.css.map" />
+    <Content Include="wwwroot\bower_components\bootstrap\dist\js\bootstrap.js" />
+    <Content Include="wwwroot\bower_components\bootstrap\dist\js\bootstrap.min.js" />
+    <Content Include="wwwroot\bower_components\font-awesome\css\font-awesome.css" />
+    <Content Include="wwwroot\bower_components\font-awesome\css\font-awesome.css.map" />
+    <Content Include="wwwroot\bower_components\font-awesome\css\font-awesome.min.css" />
+    <Content Include="wwwroot\bower_components\Ionicons\css\ionicons.css" />
+    <Content Include="wwwroot\bower_components\Ionicons\css\ionicons.min.css" />
+    <Content Include="wwwroot\bower_components\jquery\dist\jquery.js" />
+    <Content Include="wwwroot\bower_components\jquery\dist\jquery.min.js" />
+    <Content Include="wwwroot\bower_components\jquery\dist\jquery.min.map" />
+    <Content Include="wwwroot\bower_components\jquery\dist\jquery.slim.js" />
+    <Content Include="wwwroot\bower_components\jquery\dist\jquery.slim.min.js" />
+    <Content Include="wwwroot\bower_components\jquery\dist\jquery.slim.min.map" />
+  </ItemGroup>
+
+
+  <ItemGroup>
+    <PackageReference Include="bootstrap" Version="4.4.1" />
+    <PackageReference Include="Microsoft.AspNet.Mvc.Core" Version="6.0.0-rc1-final" />
+    <PackageReference Include="Microsoft.AspNetCore.App" />
+    <PackageReference Include="Microsoft.AspNetCore.Http.Extensions" Version="2.2.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Abstractions" Version="2.2.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.2.0" PrivateAssets="All" />
+    <PackageReference Include="Microsoft.AspNetCore.Session" Version="2.2.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="2.2.6" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="2.2.6">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Contracts" Version="2.2.4" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.2.4" />
+  </ItemGroup>
+
+
+  <ItemGroup>
+    <Folder Include="wwwroot\images\ProductImage\" />
+  </ItemGroup>
+
+
+  <ItemGroup>
+    <None Include="wwwroot\dist\pages\dashboard2.js" />
+    <None Include="wwwroot\fonts\font-awesome-4.7.0\fonts\fontawesome-webfont.svg" />
+    <None Include="wwwroot\fonts\font-awesome-4.7.0\fonts\fontawesome-webfont.woff2" />
+    <None Include="wwwroot\fonts\font-awesome-4.7.0\less\animated.less" />
+    <None Include="wwwroot\fonts\font-awesome-4.7.0\less\bordered-pulled.less" />
+    <None Include="wwwroot\fonts\font-awesome-4.7.0\less\core.less" />
+    <None Include="wwwroot\fonts\font-awesome-4.7.0\less\fixed-width.less" />
+    <None Include="wwwroot\fonts\font-awesome-4.7.0\less\font-awesome.less" />
+    <None Include="wwwroot\fonts\font-awesome-4.7.0\less\icons.less" />
+    <None Include="wwwroot\fonts\font-awesome-4.7.0\less\larger.less" />
+    <None Include="wwwroot\fonts\font-awesome-4.7.0\less\list.less" />
+    <None Include="wwwroot\fonts\font-awesome-4.7.0\less\mixins.less" />
+    <None Include="wwwroot\fonts\font-awesome-4.7.0\less\path.less" />
+    <None Include="wwwroot\fonts\font-awesome-4.7.0\less\rotated-flipped.less" />
+    <None Include="wwwroot\fonts\font-awesome-4.7.0\less\screen-reader.less" />
+    <None Include="wwwroot\fonts\font-awesome-4.7.0\less\stacked.less" />
+    <None Include="wwwroot\fonts\font-awesome-4.7.0\less\variables.less" />
+    <None Include="wwwroot\fonts\font-awesome-4.7.0\scss\font-awesome.scss" />
+    <None Include="wwwroot\fonts\font-awesome-4.7.0\scss\_animated.scss" />
+    <None Include="wwwroot\fonts\font-awesome-4.7.0\scss\_bordered-pulled.scss" />
+    <None Include="wwwroot\fonts\font-awesome-4.7.0\scss\_core.scss" />
+    <None Include="wwwroot\fonts\font-awesome-4.7.0\scss\_fixed-width.scss" />
+    <None Include="wwwroot\fonts\font-awesome-4.7.0\scss\_icons.scss" />
+    <None Include="wwwroot\fonts\font-awesome-4.7.0\scss\_larger.scss" />
+    <None Include="wwwroot\fonts\font-awesome-4.7.0\scss\_list.scss" />
+    <None Include="wwwroot\fonts\font-awesome-4.7.0\scss\_mixins.scss" />
+    <None Include="wwwroot\fonts\font-awesome-4.7.0\scss\_path.scss" />
+    <None Include="wwwroot\fonts\font-awesome-4.7.0\scss\_rotated-flipped.scss" />
+    <None Include="wwwroot\fonts\font-awesome-4.7.0\scss\_screen-reader.scss" />
+    <None Include="wwwroot\fonts\font-awesome-4.7.0\scss\_stacked.scss" />
+    <None Include="wwwroot\fonts\font-awesome-4.7.0\scss\_variables.scss" />
+    <None Include="wwwroot\fonts\Linearicons-Free-v1.0.0\WebFont\Linearicons-Free.svg" />
+    <None Include="wwwroot\fonts\Linearicons-Free-v1.0.0\WebFont\Linearicons-Free.woff2" />
+    <None Include="wwwroot\plugins\.npmignore" />
+    <None Include="wwwroot\plugins\bootstrap\js\bootstrap.bundle.js" />
+    <None Include="wwwroot\plugins\bootstrap\js\bootstrap.bundle.js.map" />
+    <None Include="wwwroot\plugins\bootstrap\js\bootstrap.bundle.min.js" />
+    <None Include="wwwroot\plugins\bootstrap\js\bootstrap.bundle.min.js.map" />
+    <None Include="wwwroot\plugins\bootstrap\js\bootstrap.js" />
+    <None Include="wwwroot\plugins\bootstrap\js\bootstrap.js.map" />
+    <None Include="wwwroot\plugins\bootstrap\js\bootstrap.min.js" />
+    <None Include="wwwroot\plugins\bootstrap\js\bootstrap.min.js.map" />
+    <None Include="wwwroot\plugins\chart.js\Chart.bundle.js" />
+    <None Include="wwwroot\plugins\chart.js\Chart.bundle.min.js" />
+    <None Include="wwwroot\plugins\chart.js\Chart.js" />
+    <None Include="wwwroot\plugins\chart.js\Chart.min.js" />
+    <None Include="wwwroot\plugins\fontawesome-free\webfonts\fa-brands-400.svg" />
+    <None Include="wwwroot\plugins\fontawesome-free\webfonts\fa-brands-400.woff2" />
+    <None Include="wwwroot\plugins\fontawesome-free\webfonts\fa-regular-400.svg" />
+    <None Include="wwwroot\plugins\fontawesome-free\webfonts\fa-regular-400.woff2" />
+    <None Include="wwwroot\plugins\fontawesome-free\webfonts\fa-solid-900.svg" />
+    <None Include="wwwroot\plugins\fontawesome-free\webfonts\fa-solid-900.woff2" />
+    <None Include="wwwroot\plugins\jquery\core.js" />
+    <None Include="wwwroot\plugins\jquery\jquery.js" />
+    <None Include="wwwroot\plugins\jquery\jquery.min.js" />
+    <None Include="wwwroot\plugins\jquery\jquery.min.map" />
+    <None Include="wwwroot\plugins\jquery\jquery.slim.js" />
+    <None Include="wwwroot\plugins\jquery\jquery.slim.min.js" />
+    <None Include="wwwroot\plugins\jquery\jquery.slim.min.map" />
+    <None Include="wwwroot\vendor\animsition\js\animsition.js" />
+    <None Include="wwwroot\vendor\animsition\js\animsition.min.js" />
+    <None Include="wwwroot\vendor\bootstrap\css\bootstrap-grid.css.map" />
+    <None Include="wwwroot\vendor\bootstrap\css\bootstrap-grid.min.css.map" />
+    <None Include="wwwroot\vendor\bootstrap\css\bootstrap-reboot.css.map" />
+    <None Include="wwwroot\vendor\bootstrap\css\bootstrap-reboot.min.css.map" />
+    <None Include="wwwroot\vendor\bootstrap\css\bootstrap.css.map" />
+    <None Include="wwwroot\vendor\bootstrap\css\bootstrap.min.css.map" />
+    <None Include="wwwroot\vendor\bootstrap\js\bootstrap.js" />
+    <None Include="wwwroot\vendor\bootstrap\js\bootstrap.min.js" />
+    <None Include="wwwroot\vendor\bootstrap\js\popper.js" />
+    <None Include="wwwroot\vendor\bootstrap\js\popper.min.js" />
+    <None Include="wwwroot\vendor\bootstrap\js\tooltip.js" />
+    <None Include="wwwroot\vendor\countdowntime\countdowntime.js" />
+    <None Include="wwwroot\vendor\daterangepicker\daterangepicker.js" />
+    <None Include="wwwroot\vendor\daterangepicker\moment.js" />
+    <None Include="wwwroot\vendor\daterangepicker\moment.min.js" />
+    <None Include="wwwroot\vendor\jquery\jquery-3.2.1.min.js" />
+    <None Include="wwwroot\vendor\perfect-scrollbar\perfect-scrollbar.min.js" />
+    <None Include="wwwroot\vendor\select2\select2.js" />
+    <None Include="wwwroot\vendor\select2\select2.min.js" />
+  </ItemGroup>
+  
+  <ItemGroup>
+    <PropertyPageSchema Include="$(ManagedXamlResourcesDirectory)CSharp.ProjectItemsSchema.xaml;" />
+    <ProjectCapability Include="CSharp;Managed;ClassDesigner" />
+  </ItemGroup>
+
+</Project>

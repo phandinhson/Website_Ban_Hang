@@ -47,8 +47,10 @@ namespace Website_BanDienThoai_Version1.Areas.Customer.Controllers
                         .FirstOrDefault();
                     ShoppingCartVM.Products.Add(product);
                     total = total + product.Price; //Tính tổng tiền-Phan Phú Huy
-                    ShoppingCartVM.Appointments.TotalPrice = total;
+                    
                 }
+                ShoppingCartVM.Appointments.TotalPrice = total;
+                total = 0;
                 if (AccountId != null)        //Tự điền thông tin mua hàng khi đã đăng nhập-Phan Phú Huy
                 {
                     Users user = _db.Users.Find(AccountId);
@@ -69,8 +71,6 @@ namespace Website_BanDienThoai_Version1.Areas.Customer.Controllers
 
             Appointments appointments = ShoppingCartVM.Appointments;
             appointments.BillDate = DateTime.Now;
-            appointments.TotalPrice = total;
-            total = 0;
             _db.Appointments.Add(appointments);
             _db.SaveChanges();
 

@@ -49,6 +49,7 @@ namespace Website_BanDienThoai_Version1.Controllers
                 .Include(m => m.SpecialTag)
                 .Where(m => m.Id == id)
                 .FirstOrDefaultAsync();
+            HttpContext.Session.SetInt32("ProductId", id);
             return View(product);
 
         }

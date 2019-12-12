@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Website_BanDienThoai_Version1.Data;
 
 namespace Website_BanDienThoai_Version1.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20191212151414_addContact")]
+    partial class addContact
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -76,25 +78,6 @@ namespace Website_BanDienThoai_Version1.Migrations
                     b.HasIndex("ProductsId");
 
                     b.ToTable("Comments");
-                });
-
-            modelBuilder.Entity("Website_BanDienThoai_Version1.Models.Contact", b =>
-                {
-                    b.Property<int>("ContactId")
-                        .ValueGeneratedOnAdd()
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<DateTime>("ContactDate");
-
-                    b.Property<string>("Email");
-
-                    b.Property<string>("Name");
-
-                    b.Property<string>("Opinion");
-
-                    b.HasKey("ContactId");
-
-                    b.ToTable("Contact");
                 });
 
             modelBuilder.Entity("Website_BanDienThoai_Version1.Models.ProductSelectedForAppointment", b =>

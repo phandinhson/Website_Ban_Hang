@@ -1,9 +1,8 @@
 ﻿@model Website_BanDienThoai_Version1.Models.Products
 @using Website_BanDienThoai_Version1.Extentions
 <br />
-<h2 class="text-info">
-    Product  Details
-</h2>
+
+<h2 class="text-info" style="font-size:30px"> Product  Details</h2><br />
 <form method="post">
     <div class="p-4 border rounded row">
         <input hidden asp-for="Id" />
@@ -67,22 +66,21 @@
                     <input asp-for="Name" class="form-control" readonly />
                 </div>
             </div>
-          
-                <div class="form-group row">
-                    <div class="col-4">
-                        <label asp-for="SpecialTag"></label>
-                    </div>
-                    <div class="col-8">
-                        <input asp-for="SpecialTag.Name" class="form-control" readonly />
-                    </div>
+
+            <div class="form-group row">
+                <div class="col-4">
+                    <label asp-for="SpecialTag"></label>
                 </div>
-            
+                <div class="col-8">
+                    <input asp-for="SpecialTag.Name" class="form-control" readonly />
+                </div>
+            </div>
+
             <div class="form-group row">
                 <div class="col-4">
 
                 </div>
                 <div class="col-8">
-
                     <button type="submit" value="Add to Bag" asp-route-id="@Model.Id" class="btn btn-primary">Add to Bag</button>
                 </div>
             </div>
@@ -112,14 +110,39 @@
     </div>
 
 </form>
+<br />
+<br />
+
 <div class="row">
     <div class="col-sm-9 padding-right">
         <h2 style="font-size:30px">Bình luận</h2>
     </div>
 </div>
- @Html.RenderAction("Index", "Comments", "Customer")
-        
-    
-    
+<br />
+<div class="card mb-3 wow fadeIn">
+    <div class="card-body">
+        <!-- Default form reply -->
+        <form asp-action="Create" asp-controller="Comments" asp-area="Customer" method="post">
+            <!-- Comment -->
+            <div class="form-group">
+                <label for="replyFormComment">Your comment</label>
+                <textarea class="form-control" id="replyFormComment" rows="5" name="Content"></textarea>
+            </div>
+            <!-- Name -->
+            <label for="replyFormName">Your name</label>
+            <input type="text" id="replyFormName" name="Name" class="form-control">
+            <!-- Email -->
+            <label for="replyFormEmail">Your e-mail</label>
+            <input type="email" id="replyFormEmail" name="Email" class="form-control">
+            <div class="text-center mt-4">
+                <button class="btn btn-info btn-md" type="submit">Post</button>
+            </div>
+        </form>
+    </div>
+</div>
+@Html.RenderAction("Index", "Comments", "Customer", new { Id = @ViewBag.ProductId })
+
+
+
 
 

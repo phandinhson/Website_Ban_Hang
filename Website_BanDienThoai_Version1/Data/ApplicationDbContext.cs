@@ -25,6 +25,7 @@ namespace Website_BanDienThoai_Version1.Data
         public virtual DbSet<Appointments> Appointments { get; set; }
         public virtual DbSet<ProductSelectedForAppointment> ProductSelectedForAppointment { get; set; }
         public virtual DbSet<Comments> Comments { get; set; }
+        public virtual DbSet<Contact> Contact { get; set; }
 
     }
 }

@@ -1,4 +1,5 @@
-﻿
+﻿@model Website_BanDienThoai_Version1.Models.Contact
+.
 @{
     ViewData["Title"] = "Index";
 }
@@ -9,19 +10,19 @@
             <div class="col span_2_of_3">
                 <div class="contact-form">
                     <h2>Liên hệ với chúng tôi</h2>
-                    <form>
+                    <form method="post" asp-area="Customer" asp-controller="Contact" asp-action="Create">
                         <div>
                             <span><label>Tên</label></span>
-                            <span><input type="text" class="textbox"></span>
+                            <span><input type="text" name="Name" class="textbox" ></span>
                         </div>
                         <div>
                             <span><label>E-mail</label></span>
-                            <span><input type="text" class="textbox"></span>
+                            <span><input type="text" name="Email" class="textbox"></span>
                         </div>
 
                         <div>
                             <span><label>Ý kiến </label></span>
-                            <span><textarea> </textarea></span>
+                            <span><textarea name="Opinion"> </textarea></span>
                         </div>
                         <div>
                             <span><input type="submit" value="Submit" class="myButton"></span>

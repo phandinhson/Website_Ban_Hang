@@ -10,8 +10,8 @@ using Website_BanDienThoai_Version1.Data;
 namespace Website_BanDienThoai_Version1.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20191209031902_AddComments")]
-    partial class AddComments
+    [Migration("20191212034406_addCommentNew")]
+    partial class addCommentNew
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -71,7 +71,11 @@ namespace Website_BanDienThoai_Version1.Migrations
 
                     b.Property<string>("Name");
 
+                    b.Property<int>("ProductsId");
+
                     b.HasKey("CommentId");
+
+                    b.HasIndex("ProductsId");
 
                     b.ToTable("Comments");
                 });
@@ -166,6 +170,14 @@ namespace Website_BanDienThoai_Version1.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Users");
+                });
+
+            modelBuilder.Entity("Website_BanDienThoai_Version1.Models.Comments", b =>
+                {
+                    b.HasOne("Website_BanDienThoai_Version1.Models.Products", "Products")
+                        .WithMany("Comments")
+                        .HasForeignKey("ProductsId")
+                        .OnDelete(DeleteBehavior.Cascade);
                 });
 
             modelBuilder.Entity("Website_BanDienThoai_Version1.Models.ProductSelectedForAppointment", b =>

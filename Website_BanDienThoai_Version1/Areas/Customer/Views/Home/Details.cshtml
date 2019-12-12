@@ -2,7 +2,7 @@
 @using Website_BanDienThoai_Version1.Extentions
 <br />
 
-<h2 class="text-info" style="font-size:30px"> Product  Details</h2><br />
+<h2 class="text-info" style="font-size:30px"> Chi tiết sản phẩm </h2><br />
 <form method="post">
     <div class="p-4 border rounded row">
         <input hidden asp-for="Id" />
@@ -10,7 +10,7 @@
         <div class="col-8">
             <div class="form-group row">
                 <div class="col-4">
-                    <label asp-for="Name"></label>
+                    <label asp-for="Name">Tên</label>
                 </div>
                 <div class="col-8">
                     <input asp-for="Name" class="form-control" readonly />
@@ -19,7 +19,7 @@
 
             <div class="form-group row">
                 <div class="col-4">
-                    <label asp-for="Memory"></label>
+                    <label asp-for="Memory">RAM</label>
                 </div>
                 <div class="col-8">
                     <input asp-for="Memory" class="form-control" readonly />
@@ -28,7 +28,7 @@
 
             <div class="form-group row">
                 <div class="col-4">
-                    <label asp-for="Capacity"></label>
+                    <label asp-for="Capacity">Dung lượng</label>
                 </div>
                 <div class="col-8">
                     <input asp-for="Capacity" class="form-control" readonly />
@@ -36,7 +36,7 @@
             </div>
             <div class="form-group row">
                 <div class="col-4">
-                    <label asp-for="Manufacturer"></label>
+                    <label asp-for="Manufacturer">Nhà sản xuất</label>
                 </div>
                 <div class="col-8">
                     <input asp-for="Manufacturer" class="form-control" readonly />
@@ -44,7 +44,7 @@
             </div>
             <div class="form-group row">
                 <div class="col-4">
-                    <label asp-for="Color"></label>
+                    <label asp-for="Color">Màu sắc</label>
                 </div>
                 <div class="col-8">
                     <input asp-for="Color" class="form-control" readonly />
@@ -52,7 +52,7 @@
             </div>
             <div class="form-group row">
                 <div class="col-4">
-                    <label asp-for="Price"></label>
+                    <label asp-for="Price">Giá</label>
                 </div>
                 <div class="col-8">
                     <input asp-for="Price" class="form-control" readonly />
@@ -60,16 +60,16 @@
             </div>
             <div class="form-group row">
                 <div class="col-4">
-                    <label asp-for="Category"></label>
+                    <label asp-for="Category">Danh mục</label>
                 </div>
                 <div class="col-8">
-                    <input asp-for="Name" class="form-control" readonly />
+                    <input asp-for="Category.Name" class="form-control" readonly />
                 </div>
             </div>
 
             <div class="form-group row">
                 <div class="col-4">
-                    <label asp-for="SpecialTag"></label>
+                    <label asp-for="SpecialTag">Đặc biệt</label>
                 </div>
                 <div class="col-8">
                     <input asp-for="SpecialTag.Name" class="form-control" readonly />
@@ -81,7 +81,7 @@
 
                 </div>
                 <div class="col-8">
-                    <button type="submit" value="Add to Bag" asp-route-id="@Model.Id" class="btn btn-primary">Add to Bag</button>
+                    <button type="submit" value="Add to Bag" asp-route-id="@Model.Id" class="btn btn-primary">Thêm vào giỏ</button>
                 </div>
             </div>
         </div>
@@ -104,7 +104,7 @@
         <br />
         <div class="form-group">
             <input hidden asp-for="Id" />
-            <a asp-action="Index" class="button">Back to Home</a>
+            <a asp-action="Index" class="button">Về trang chủ</a>
         </div>
 
     </div>
@@ -135,7 +135,7 @@
             <label for="replyFormEmail">Your e-mail</label>
             <input type="email" id="replyFormEmail" name="Email" class="form-control">
             <div class="text-center mt-4">
-                <button class="btn btn-info btn-md" type="submit">Post</button>
+                <button class="btn btn-info btn-md" type="submit">Bình luận</button>
             </div>
         </form>
     </div>

@@ -21,19 +21,17 @@
 
                                 </th>
                                 <th style="text-align:center;">
-                                    <label asp-for="@Model.Products.FirstOrDefault().Name"></label>
+                                    <label asp-for="@Model.Products.FirstOrDefault().Name">Tên sản phẩm</label>
                                 </th>
                                 <th style="text-align:center" ;">
-                                    <label asp-for="@Model.Products.FirstOrDefault().Price"></label>
+                                    <label asp-for="@Model.Products.FirstOrDefault().Price">Giá</label>
                                 </th>
                                 <th style="text-align:center" ;">
-                                    <label asp-for="@Model.Products.FirstOrDefault().Color"></label>
+                                    <label asp-for="@Model.Products.FirstOrDefault().Color">Màu sắc</label>
                                 </th>
-                                <th style="text-align:center" ;>
-                                    <label asp-for="@Model.Products.FirstOrDefault().Category.Name"></label>
-                                </th>
+                              
                                 <th style="text-align:center;">
-                                    <label asp-for="@Model.Products.FirstOrDefault().Memory"></label>
+                                    <label asp-for="@Model.Products.FirstOrDefault().Memory">RAM</label>
                                 </th>
 
                                 <th style="text-align:center;"></th>
@@ -54,13 +52,11 @@
                                     </td>
 
                                     <td style="text-align:center">
-                                        @Html.DisplayFor(c => item.Color)
+                                        @Html.DisplayFor(c => item.Color) 
                                     </td>
+                               
                                     <td style="text-align:center">
-                                        @Html.DisplayFor(c => item.Category.Name)
-                                    </td>
-                                    <td style="text-align:center">
-                                        @Html.DisplayFor(c => item.Memory)
+                                        @Html.DisplayFor(c => item.Memory)GB
                                     </td>
                                     <td style="text-align:center">
                                         <button type="submit" class="btn btn-danger" asp-action="Remove" asp-route-id="@item.Id">
@@ -76,25 +72,25 @@
                     <div class="col-4" style="padding-left:30px;">
                         <div class="row">
                             <div class="col-12">
-                                <label>Name : </label>
+                                <label>Tên  </label>
                             </div>
                             <div class="col-12" style="padding-bottom:15px">
                                 <input asp-for="@Model.Appointments.CustomerName" class="form-control" />
                             </div>
                             <div class="col-12">
-                                <label>Phone Number : </label>
+                                <label>Số điện thoại  </label>
                             </div>
                             <div class="col-12" style="padding-bottom:15px">
                                 <input asp-for="@Model.Appointments.CustomerPhoneNumber" class="form-control" />
                             </div>
                             <div class="col-12">
-                                <label>Email  : </label>
+                                <label>Email  </label>
                             </div>
                             <div class="col-12" style="padding-bottom:15px">
                                 <input asp-for="@Model.Appointments.CustomerEmail" class="form-control" />
                             </div>
                             <div class="col-12">
-                                <label>Appointment Date : </label>
+                                <label>Ngày nhận hàng  </label>
                             </div>
                             <div class="col-12" style="padding-bottom:15px">
                                 <input asp-for="@Model.Appointments.AppointmentDate" value="" type="text" id="datepicker" class="form-control" />

@@ -132,7 +132,8 @@ namespace Website_BanDienThoai_Version1.Areas.Account
         //Get: Change Account
         public async Task<IActionResult> ChangeAccount(int? id)
         {
-            if (id == null)
+            var currentId = HttpContext.Session.GetInt32("AccountId");
+            if (id == null && id!=currentId)
             {
                 return NotFound();
             }
@@ -157,9 +158,9 @@ namespace Website_BanDienThoai_Version1.Areas.Account
                
                 _db.Update(user);
                 await _db.SaveChangesAsync();
-                return RedirectToAction("Index", "Home");
+                return RedirectToAction("Index", "Home", new { area = "Customer" });
             }
-            return View(user);
+            return RedirectToAction("Index", "Home", new { area = "Customer" });
         }
 
         /// <summary>

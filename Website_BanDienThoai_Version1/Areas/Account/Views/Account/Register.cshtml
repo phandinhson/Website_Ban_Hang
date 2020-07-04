@@ -21,55 +21,53 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-8 py-5 border">
+            <div class="col-md-8 card-body border register-form">
                 <h4 class="pb-4" style="text-align:center;font-size:30px;font-style:normal;">Vui lòng nhập thông tin</h4>
                 <form role="form" asp-action="Register" asp-controller="Account" method="post">
                     <div class="form-group mb-3">
-                        <input type="text" name="UserName" asp-for="UserName" class="form-control input-sm" placeholder="UserName">
+                        <input type="text" name="UserName" asp-for="UserName" class="form-control input-sm p-3" placeholder="UserName">
                         <span asp-validation-for="UserName" class="text-danger"></span>
                     </div>
                     <div class="form-group mb-3">
-                        <input type="password" name="Password" asp-for="Password" class="form-control input-sm" placeholder="Password">
+                        <input type="password" name="Password" asp-for="Password" class="form-control input-sm p-3" placeholder="Password">
                         <span asp-validation-for="Password" class="text-danger"></span>
                     </div>
                     <div class="form-group mb-3">
-                        <input type="password" name="ConfirmPassword" asp-for="ConfirmPassword" class="form-control input-sm" placeholder="Confirm Password">
+                        <input type="password" name="ConfirmPassword" asp-for="ConfirmPassword" class="form-control input-sm p-3" placeholder="Confirm Password">
                         <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
                     </div>
                     <div class="form-group mb-3">
-                        <input type="email" name="Email" asp-for="Email" class="form-control input-sm" placeholder="Email Address">
+                        <input type="email" name="Email" asp-for="Email" class="form-control input-sm p-3" placeholder="Email Address">
                         <span asp-validation-for="Email" class="text-danger"></span>
                     </div>
                     <div class="form-row">
                         <div class="form-group col-md-6">
-                            <input type="text" name="Name" asp-for="Name" class="form-control input-sm" placeholder="FullName">
+                            <input type="text" name="Name" asp-for="Name" class="form-control input-sm p-3" placeholder="FullName">
                             <span asp-validation-for="Name" class="text-danger"></span>
                         </div>
                         <div class="form-group col-md-6">
-                            <input type='date' class="form-control" asp-for="DateOfBith" />
-                            <span asp-validation-for="DateOfBith" class="text-danger"></span>
+                            <input type="text" name="Phone" data-val="true" autocomplete="off" data-val-required="The Mobile field is required." asp-for="Phone" class="form-control input-sm p-3" placeholder="Phone">
+                            <span asp-validation-for="Phone" class="text-danger"></span>
                         </div>
+
                     </div>
                     <div class="form-row">
                         <div class="form-group col-md-6">
-                            <input type="text" name="Phone" data-val="true" autocomplete="off" data-val-required="The Mobile field is required." asp-for="Phone" class="form-control input-sm" placeholder="Phone">
-                            <span asp-validation-for="Phone" class="text-danger"></span>
+                            <input type='date' class="form-control p-3" asp-for="DateOfBith" />
+                            <span asp-validation-for="DateOfBith" class="text-danger"></span>
                         </div>
-                        <div class="form-group col-md-6">
+                        <div class="form-row col-md-6 justify-content-center align-items-md-center">
+                            <input type="radio" asp-for="Gender" value=1 class="mr-2" /> Male
 
-                            <label>
-                                <input type="radio" asp-for="Gender" value=1 /> Male
-                            </label>
-                            <label>
-                                <input type="radio" asp-for="Gender" value=0 /> Female
-                            </label>
-                            <span asp-validation-for="Gender" class="text-danger"></span>
+                            <input type="radio" asp-for="Gender" value=0 class="ml-5 mr-2" /> Female
+
                         </div>
+                        <span asp-validation-for="Gender" class="text-danger"></span>
                     </div>
                     <div class="form-row">
                         <div class="form-group">
                             <div class="form-group">
-                                <div class="form-check">
+                                <div class="form-check mr-1">
                                     <input class="form-check-input" type="checkbox" value="" id="invalidCheck2"
                                            required>
                                     <label class="form-check-label" for="invalidCheck2">
@@ -81,7 +79,7 @@
                     </div>
 
                     <div class="form-row">
-                        <input type="submit" value="Register" class="btn btn-info btn-block">
+                        <input type="submit" value="Đăng kí" class="btn btn-info btn-block" style="line-height:4rem;font-size:2rem">
                     </div>
                 </form>
             </div>

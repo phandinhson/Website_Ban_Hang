@@ -28,6 +28,7 @@ namespace Website_BanDienThoai_Version1.Models.ViewModel
         public string Gender { get; set; }
         [Required]
         [StringLength(10, MinimumLength = 6)]
+        [RegularExpression(pattern: "^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9]).{5,}$", ErrorMessage = "Password includes uppercase,lowercase,number")]
         public string Password { get; set; }
         [Required]
         [NotMapped] // Does not effect with your database
